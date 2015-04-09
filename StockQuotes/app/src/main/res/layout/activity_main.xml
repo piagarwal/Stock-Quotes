@@ -1,0 +1,95 @@
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:id="@+id/tableLayout"
+>
+<TableRow
+    android:id="@+id/tableRow1"
+    >
+    <TextView
+
+        android:id="@+id/enterStockSymbolTextView1"
+        android:text="@string/stock_symbol"
+        android:padding="5dp"
+
+        />
+
+    <EditText
+
+
+        android:id="@+id/stockSymbolEditText"
+        android:ems = "10"
+        android:layout_weight="1"
+     >
+        <requestFocus/>
+
+</EditText>
+    <Button
+
+        android:id="@+id/enterStockSymbolButton"
+        android:text="@string/enter_stock_symbol"
+
+        />
+
+
+
+</TableRow>
+
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/egg_shell"
+        >
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/stock_symbol_list"
+            android:id="@+id/textView"
+            android:layout_span="2"
+            android:padding="5dp"
+
+            android:textSize="@dimen/stock_list_text_size"
+
+            android:textColor="@color/black"
+             />
+    </TableRow>
+
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/egg_shell"
+        android:layout_weight="1">
+
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/stockScrollView"
+
+            android:layout_weight="1"
+            android:padding="5dp"
+            >
+
+            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+                android:stretchColumns="*"
+                android:id="@+id/tableLayout2">
+
+                </TableLayout>
+        </ScrollView>
+    </TableRow>
+    <TableRow>
+        <Button
+            android:layout_width="match_parent"
+            android:layout_weight="1"
+            android:layout_span="2"
+            android:text="@string/delete_all_symbols"
+            android:id="@+id/deleteStocksButton"
+            />
+    </TableRow>
+
+</TableLayout>
